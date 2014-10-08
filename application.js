@@ -19,7 +19,7 @@ var boxColors = {
 function bindEvents() {
   $('#box-1').on('click', moreRed)
   $('#box-2').on('click', moreOrange)
-  // $('#box-3').on('click', moreYellow)
+  $('#box-3').on('click', moreYellow)
   // $('#box-4').on('click', moreGreen)
   // $('#box-5').on('click', moreTeal)
   // $('#box-6').on('click', moreBlue)
@@ -140,5 +140,48 @@ function moreOrange() {
   $('#box-1').css('background-color', box1Color)
   $('#box-3').css('background-color', box3Color)
   $('#box-5').css('background-color', box5Color)
+
+}
+
+
+function moreYellow() {
+  // Box 2
+  if (boxColors['box2'][0] < 245) {
+    boxColors['box2'][0] += 10
+  } else {
+    boxColors['box2'][0] = 255
+  }
+  if (boxColors['box2'][1] < 245) {
+    boxColors['box2'][1] += 10
+  } else {
+    boxColors['box2'][1] = 255
+  }
+  if (boxColors['box2'][2] > 10) {
+    boxColors['box2'][2] -= 10
+  } else {
+    boxColors['box2'][2] = 0
+  }
+  // Box 6
+  if (boxColors['box6'][0] < 245) {
+    boxColors['box6'][0] += 10
+  } else {
+    boxColors['box6'][0] = 255
+  }
+  if (boxColors['box6'][1] < 245) {
+    boxColors['box6'][1] += 10
+  } else {
+    boxColors['box6'][1] = 255
+  }
+  if (boxColors['box6'][2] > 10) {
+    boxColors['box6'][2] -= 10
+  } else {
+    boxColors['box6'][2] = 0
+  }
+
+  var box2Color = 'rgb(' + boxColors['box2'][0] + ',' + boxColors['box2'][1] + ',' + boxColors['box2'][2] + ')'
+  var box6Color = 'rgb(' + boxColors['box6'][0] + ',' + boxColors['box6'][1] + ',' + boxColors['box6'][2] + ')'
+
+  $('#box-2').css('background-color', box2Color)
+  $('#box-6').css('background-color', box6Color)
 
 }

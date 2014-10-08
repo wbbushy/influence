@@ -18,7 +18,7 @@ var boxColors = {
 
 function bindEvents() {
   $('#box-1').on('click', moreRed)
-  // $('#box-2').on('click', moreOrange)
+  $('#box-2').on('click', moreOrange)
   // $('#box-3').on('click', moreYellow)
   // $('#box-4').on('click', moreGreen)
   // $('#box-5').on('click', moreTeal)
@@ -28,7 +28,7 @@ function bindEvents() {
   // $('#box-9').on('click', moreWhite)
 }
 
-function moreRed(e) {
+function moreRed() {
   // Box 2
   if (boxColors['box2'][0] < 245) {
     boxColors['box2'][0] += 10
@@ -45,8 +45,8 @@ function moreRed(e) {
   } else {
     boxColors['box2'][2] = 0
   }
-  // Now on box 4
-  if (boxColors['box4'][0] > 245) {
+  // box 4
+  if (boxColors['box4'][0] < 245) {
     boxColors['box4'][0] += 10
   } else {
     boxColors['box4'][0] = 255
@@ -69,3 +69,76 @@ function moreRed(e) {
   $('#box-4').css('background-color', box4Color)
 }
 
+
+function moreOrange() {
+  // Box 1
+  if (boxColors['box1'][0] < 245) {
+    boxColors['box1'][0] += 10
+  } else {
+    boxColors['box1'][0] = 255
+  }
+  if (boxColors['box1'][1] < 118) {
+    boxColors['box1'][1] += 10
+  }
+  if (boxColors['box1'][1] > 138) {
+    boxColors['box1'][1] -= 10
+  }
+  if (boxColors['box1'][1] > 138 && boxColors['box1'][1] < 118) {
+    boxColors['box1'][1] = 128
+  }
+  if (boxColors['box1'][2] > 10) {
+    boxColors['box1'][2] -= 10
+  } else {
+    boxColors['box1'][2] = 0
+  }
+  // Box 3
+  if (boxColors['box3'][0] < 245) {
+    boxColors['box3'][0] += 10
+  } else {
+    boxColors['box3'][0] = 255
+  }
+  if (boxColors['box3'][1] < 118) {
+    boxColors['box3'][1] += 10
+  }
+  if (boxColors['box3'][1] > 138) {
+    boxColors['box3'][1] -= 10
+  }
+  if (boxColors['box3'][1] > 138 && boxColors['box3'][1] < 118) {
+    boxColors['box3'][1] = 128
+  }
+  if (boxColors['box3'][2] > 10) {
+    boxColors['box3'][2] -= 10
+  } else {
+    boxColors['box3'][2] = 0
+  }
+    // Box 5
+  if (boxColors['box5'][0] < 245) {
+    boxColors['box5'][0] += 10
+  } else {
+    boxColors['box5'][0] = 255
+  }
+  if (boxColors['box5'][1] < 118) {
+    boxColors['box5'][1] += 10
+  }
+  if (boxColors['box5'][1] > 138) {
+    boxColors['box5'][1] -= 10
+  }
+  if (boxColors['box5'][1] > 138 && boxColors['box5'][1] < 118) {
+    boxColors['box5'][1] = 128
+  }
+  if (boxColors['box5'][2] > 10) {
+    boxColors['box5'][2] -= 10
+  } else {
+    boxColors['box5'][2] = 0
+  }
+
+  var box1Color = 'rgb(' + boxColors['box1'][0] + ',' + boxColors['box1'][1] + ',' + boxColors['box1'][2] + ')'
+  var box3Color = 'rgb(' + boxColors['box3'][0] + ',' + boxColors['box3'][1] + ',' + boxColors['box3'][2] + ')'
+  var box5Color = 'rgb(' + boxColors['box5'][0] + ',' + boxColors['box5'][1] + ',' + boxColors['box5'][2] + ')'
+
+  // Changing the Dom
+  $('#box-1').css('background-color', box1Color)
+  $('#box-3').css('background-color', box3Color)
+  $('#box-5').css('background-color', box5Color)
+
+}

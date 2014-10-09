@@ -21,7 +21,7 @@ function bindEvents() {
   $('#box-2').on('click', moreOrange)
   $('#box-3').on('click', moreYellow)
   $('#box-4').on('click', moreGreen)
-  // $('#box-5').on('click', moreTeal)
+  $('#box-5').on('click', moreTeal)
   // $('#box-6').on('click', moreBlue)
   // $('#box-7').on('click', morePurple)
   // $('#box-8').on('click', moreBlack)
@@ -246,3 +246,126 @@ function moreGreen() {
   $('#box-7').css('background-color', box7Color)
 
 }
+
+function moreTeal() {
+  // Box 2
+  if (boxColors['box2'][0] > 10) {
+    boxColors['box2'][0] -= 10
+  } else {
+    boxColors['box2'][0] = 0
+  }
+  if (boxColors['box2'][1] < 138 && boxColors['box2'][1] > 118) {
+    boxColors['box2'][1] = 128
+  }
+  if (boxColors['box2'][1] < 118) {
+    boxColors['box2'][1] += 10
+  }
+  if (boxColors['box2'][1] > 138) {
+    boxColors['box2'][1] -= 10
+  }
+  if (boxColors['box2'][2] < 138 && boxColors['box2'][1] > 118) {
+    boxColors['box2'][2] = 128
+  }
+  if (boxColors['box2'][2] < 118) {
+    boxColors['box2'][2] += 10
+  }
+  if (boxColors['box2'][2] > 138) {
+    boxColors['box2'][2] -= 10
+  }
+  // Box 4
+  if (boxColors['box4'][0] > 10) {
+    boxColors['box4'][0] -= 10
+  } else {
+    boxColors['box4'][0] = 0
+  }
+  if (boxColors['box4'][1] < 138 && boxColors['box4'][1] > 118) {
+    boxColors['box4'][1] = 128
+  }
+  if (boxColors['box4'][1] < 118) {
+    boxColors['box4'][1] += 10
+  }
+  if (boxColors['box4'][1] > 138) {
+    boxColors['box4'][1] -= 10
+  }
+  if (boxColors['box4'][2] < 138 && boxColors['box4'][1] > 118) {
+    boxColors['box4'][2] = 128
+  }
+  if (boxColors['box4'][2] < 118) {
+    boxColors['box4'][2] += 10
+  }
+  if (boxColors['box4'][2] > 138) {
+    boxColors['box4'][2] -= 10
+  }
+  // Box 6
+    if (boxColors['box6'][0] > 10) {
+    boxColors['box6'][0] -= 10
+  } else {
+    boxColors['box6'][0] = 0
+  }
+  if (boxColors['box6'][1] < 138 && boxColors['box6'][1] > 118) {
+    boxColors['box6'][1] = 128
+  }
+  if (boxColors['box6'][1] < 118) {
+    boxColors['box6'][1] += 10
+  }
+  if (boxColors['box6'][1] > 138) {
+    boxColors['box6'][1] -= 10
+  }
+  if (boxColors['box6'][2] < 138 && boxColors['box6'][1] > 118) {
+    boxColors['box6'][2] = 128
+  }
+  if (boxColors['box6'][2] < 118) {
+    boxColors['box6'][2] += 10
+  }
+  if (boxColors['box6'][2] > 138) {
+    boxColors['box6'][2] -= 10
+  }
+  // Box 8
+    if (boxColors['box8'][0] > 10) {
+    boxColors['box8'][0] -= 10
+  } else {
+    boxColors['box8'][0] = 0
+  }
+  if (boxColors['box8'][1] < 138 && boxColors['box8'][1] > 118) {
+    boxColors['box8'][1] = 128
+  }
+  if (boxColors['box8'][1] < 118) {
+    boxColors['box8'][1] += 10
+  }
+  if (boxColors['box8'][1] > 138) {
+    boxColors['box8'][1] -= 10
+  }
+  if (boxColors['box8'][2] < 138 && boxColors['box8'][1] > 118) {
+    boxColors['box8'][2] = 128
+  }
+  if (boxColors['box8'][2] < 118) {
+    boxColors['box8'][2] += 10
+  }
+  if (boxColors['box8'][2] > 138) {
+    boxColors['box8'][2] -= 10
+  }
+
+  var box2Color = 'rgb(' + boxColors['box2'][0] + ',' + boxColors['box2'][1] + ',' + boxColors['box2'][2] + ')'
+  var box4Color = 'rgb(' + boxColors['box4'][0] + ',' + boxColors['box4'][1] + ',' + boxColors['box4'][2] + ')'
+  var box6Color = 'rgb(' + boxColors['box6'][0] + ',' + boxColors['box6'][1] + ',' + boxColors['box6'][2] + ')'
+  var box8Color = 'rgb(' + boxColors['box8'][0] + ',' + boxColors['box8'][1] + ',' + boxColors['box8'][2] + ')'
+
+
+  $('#box-2').css('background-color', box2Color)
+  $('#box-4').css('background-color', box4Color)
+  $('#box-6').css('background-color', box6Color)
+  $('#box-8').css('background-color', box8Color)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

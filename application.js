@@ -20,7 +20,7 @@ function bindEvents() {
   $('#box-1').on('click', moreRed)
   $('#box-2').on('click', moreOrange)
   $('#box-3').on('click', moreYellow)
-  // $('#box-4').on('click', moreGreen)
+  $('#box-4').on('click', moreGreen)
   // $('#box-5').on('click', moreTeal)
   // $('#box-6').on('click', moreBlue)
   // $('#box-7').on('click', morePurple)
@@ -183,5 +183,66 @@ function moreYellow() {
 
   $('#box-2').css('background-color', box2Color)
   $('#box-6').css('background-color', box6Color)
+
+}
+
+function moreGreen() {
+  // Box 1
+  if (boxColors['box1'][0] > 10) {
+    boxColors['box1'][0] -= 10
+  } else {
+    boxColors['box1'][0] = 0
+  }
+  if (boxColors['box1'][1] < 245) {
+    boxColors['box1'][1] += 10
+  } else {
+    boxColors['box1'][1] =255
+  }
+  if (boxColors['box1'][2] > 10) {
+    boxColors['box1'][2] -= 10
+  } else {
+    boxColors['box1'][2] = 0
+  }
+
+  // Box 5
+  if (boxColors['box5'][0] > 10) {
+    boxColors['box5'][0] -= 10
+  } else {
+    boxColors['box5'][0] = 0
+  }
+  if (boxColors['box5'][1] < 245) {
+    boxColors['box5'][1] += 10
+  } else {
+    boxColors['box5'][1] =255
+  }
+  if (boxColors['box5'][2] > 10) {
+    boxColors['box5'][2] -= 10
+  } else {
+    boxColors['box5'][2] = 0
+  }
+  // Box 7
+    if (boxColors['box7'][0] > 10) {
+    boxColors['box7'][0] -= 10
+  } else {
+    boxColors['box7'][0] = 0
+  }
+  if (boxColors['box7'][1] < 245) {
+    boxColors['box7'][1] += 10
+  } else {
+    boxColors['box7'][1] =255
+  }
+  if (boxColors['box7'][2] > 10) {
+    boxColors['box7'][2] -= 10
+  } else {
+    boxColors['box7'][2] = 0
+  }
+
+  var box1Color = 'rgb(' + boxColors['box1'][0] + ',' + boxColors['box1'][1] + ',' + boxColors['box1'][2] + ')'
+  var box5Color = 'rgb(' + boxColors['box5'][0] + ',' + boxColors['box5'][1] + ',' + boxColors['box5'][2] + ')'
+  var box7Color = 'rgb(' + boxColors['box7'][0] + ',' + boxColors['box7'][1] + ',' + boxColors['box7'][2] + ')'
+
+  $('#box-1').css('background-color', box1Color)
+  $('#box-5').css('background-color', box5Color)
+  $('#box-7').css('background-color', box7Color)
 
 }

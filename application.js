@@ -22,8 +22,8 @@ function bindEvents() {
   $('#box-3').on('click', moreYellow)
   $('#box-4').on('click', moreGreen)
   $('#box-5').on('click', moreTeal)
-  // $('#box-6').on('click', moreBlue)
-  // $('#box-7').on('click', morePurple)
+  $('#box-6').on('click', moreBlue)
+  $('#box-7').on('click', morePurple)
   // $('#box-8').on('click', moreBlack)
   // $('#box-9').on('click', moreWhite)
 }
@@ -357,12 +357,122 @@ function moreTeal() {
   $('#box-8').css('background-color', box8Color)
 }
 
+function moreBlue() {
+  // Box 3
+  if (boxColors['box3'][0] > 10) {
+    boxColors['box3'][0] -= 10
+  } else {
+    boxColors['box3'][0] = 0
+  }
+  if (boxColors['box3'][1] > 10) {
+    boxColors['box3'][1] -= 10
+  } else {
+    boxColors['box3'][1] = 0
+  }
+  if (boxColors['box3'][2] < 245) {
+    boxColors['box3'][2] += 10
+  } else {
+    boxColors['box3'][2] = 255
+  }
+  // Box 5
+  if (boxColors['box5'][0] > 10) {
+    boxColors['box5'][0] -= 10
+  } else {
+    boxColors['box5'][0] = 0
+  }
+  if (boxColors['box5'][1] > 10) {
+    boxColors['box5'][1] -= 10
+  } else {
+    boxColors['box5'][1] = 0
+  }
+  if (boxColors['box5'][2] < 245) {
+    boxColors['box5'][2] += 10
+  } else {
+    boxColors['box5'][2] = 255
+  }
+  // Box 9
+  if (boxColors['box9'][0] > 10) {
+    boxColors['box9'][0] -= 10
+  } else {
+    boxColors['box9'][0] = 0
+  }
+  if (boxColors['box9'][1] > 10) {
+    boxColors['box9'][1] -= 10
+  } else {
+    boxColors['box9'][1] = 0
+  }
+  if (boxColors['box9'][2] < 245) {
+    boxColors['box9'][2] += 10
+  } else {
+    boxColors['box9'][2] = 255
+  }
 
+  var box3Color = 'rgb(' + boxColors['box3'][0] + ',' + boxColors['box3'][1] + ',' + boxColors['box3'][2] + ')'
+  var box5Color = 'rgb(' + boxColors['box5'][0] + ',' + boxColors['box5'][1] + ',' + boxColors['box5'][2] + ')'
+  var box9Color = 'rgb(' + boxColors['box9'][0] + ',' + boxColors['box9'][1] + ',' + boxColors['box9'][2] + ')'
 
+  $('#box-3').css('background-color', box3Color)
+  $('#box-5').css('background-color', box5Color)
+  $('#box-9').css('background-color', box9Color)
+}
 
+function morePurple() {
+  // Box 4
+  if (boxColors['box4'][0] > 118 && boxColors['box4'][0] < 138) {
+    boxColors['box4'][0] = 128
+  }
+  if (boxColors['box4'][0] < 118) {
+    boxColors['box4'][0] += 10
+  }
+  if (boxColors['box4'][0] > 138) {
+    boxColors['box4'][0] -= 10
+  }
+  if (boxColors['box4'][1] > 10) {
+    boxColors['box4'][1] -= 10
+  } else {
+    boxColors['box4'][1] = 0
+  }
+  if (boxColors['box4'][2] > 118 && boxColors['box4'][2] < 138) {
+    boxColors['box4'][2] = 128
+  }
+  if (boxColors['box4'][2] < 118) {
+    boxColors['box4'][2] += 10
+  }
+  if (boxColors['box4'][2] > 138) {
+    boxColors['box4'][2] -= 10
+  }
+  // Box 8
+  if (boxColors['box8'][0] > 118 && boxColors['box8'][0] < 138) {
+    boxColors['box8'][0] = 128
+  }
+  if (boxColors['box8'][0] < 118) {
+    boxColors['box8'][0] += 10
+  }
+  if (boxColors['box8'][0] > 138) {
+    boxColors['box8'][0] -= 10
+  }
+  if (boxColors['box8'][1] > 10) {
+    boxColors['box8'][1] -= 10
+  } else {
+    boxColors['box8'][1] = 0
+  }
+  if (boxColors['box8'][2] > 118 && boxColors['box8'][2] < 138) {
+    boxColors['box8'][2] = 128
+  }
+  if (boxColors['box8'][2] < 118) {
+    boxColors['box8'][2] += 10
+  }
+  if (boxColors['box8'][2] > 138) {
+    boxColors['box8'][2] -= 10
+  }
 
+  var box4Color = 'rgb(' + boxColors['box4'][0] + ',' + boxColors['box4'][1] + ',' + boxColors['box4'][2] + ')'
+  var box8Color = 'rgb(' + boxColors['box8'][0] + ',' + boxColors['box8'][1] + ',' + boxColors['box8'][2] + ')'
 
+  $('#box-4').css('background-color', box4Color)
+  $('#box-8').css('background-color', box8Color)
 
+}
 
 
 

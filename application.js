@@ -15,7 +15,6 @@ var boxColors = {
 }
 
 
-
 function bindEvents() {
   $('#box-1').on('click', moreRed)
   $('#box-2').on('click', moreOrange)
@@ -26,6 +25,8 @@ function bindEvents() {
   $('#box-7').on('click', morePurple)
   $('#box-8').on('click', moreBlack)
   $('#box-9').on('click', moreWhite)
+  $('#reset-button').on('click', resetColors)
+
 }
 
 function moreRed() {
@@ -576,6 +577,38 @@ function moreWhite() {
 
 }
 
+var boxColorsDefault = {
+  box1: [255, 0, 0],
+  box2: [255, 128, 0],
+  box3: [255, 255, 0],
+  box4: [0, 255, 0],
+  box5: [0, 128, 128],
+  box6: [0, 0, 255],
+  box7: [0, 128, 0],
+  box8: [0, 0 ,0],
+  box9: [255, 255, 255]
+}
 
+function resetColors() {
+  var boxColorsDefault1 = 'rgb(' + boxColorsDefault['box1'][0] + ',' + boxColorsDefault['box1'][1] + ',' + boxColorsDefault['box1'][2] + ')'
+  var boxColorsDefault2 = 'rgb(' + boxColorsDefault['box2'][0] + ',' + boxColorsDefault['box2'][1] + ',' + boxColorsDefault['box2'][2] + ')'
+  var boxColorsDefault3 = 'rgb(' + boxColorsDefault['box3'][0] + ',' + boxColorsDefault['box3'][1] + ',' + boxColorsDefault['box3'][2] + ')'
+  var boxColorsDefault4 = 'rgb(' + boxColorsDefault['box4'][0] + ',' + boxColorsDefault['box4'][1] + ',' + boxColorsDefault['box4'][2] + ')'
+  var boxColorsDefault5 = 'rgb(' + boxColorsDefault['box5'][0] + ',' + boxColorsDefault['box5'][1] + ',' + boxColorsDefault['box5'][2] + ')'
+  var boxColorsDefault6 = 'rgb(' + boxColorsDefault['box6'][0] + ',' + boxColorsDefault['box6'][1] + ',' + boxColorsDefault['box6'][2] + ')'
+  var boxColorsDefault7 = 'rgb(' + boxColorsDefault['box7'][0] + ',' + boxColorsDefault['box7'][1] + ',' + boxColorsDefault['box7'][2] + ')'
+  var boxColorsDefault8 = 'rgb(' + boxColorsDefault['box8'][0] + ',' + boxColorsDefault['box8'][1] + ',' + boxColorsDefault['box8'][2] + ')'
+  var boxColorsDefault9 = 'rgb(' + boxColorsDefault['box9'][0] + ',' + boxColorsDefault['box9'][1] + ',' + boxColorsDefault['box9'][2] + ')'
 
+  $('#box-1').css('background-color', boxColorsDefault1)
+  $('#box-2').css('background-color', boxColorsDefault2)
+  $('#box-3').css('background-color', boxColorsDefault3)
+  $('#box-4').css('background-color', boxColorsDefault4)
+  $('#box-5').css('background-color', boxColorsDefault5)
+  $('#box-6').css('background-color', boxColorsDefault6)
+  $('#box-7').css('background-color', boxColorsDefault7)
+  $('#box-8').css('background-color', boxColorsDefault8)
+  $('#box-9').css('background-color', boxColorsDefault9)
+
+}
 

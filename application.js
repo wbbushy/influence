@@ -577,38 +577,39 @@ function moreWhite() {
 
 }
 
-var boxColorsDefault = {
-  box1: [255, 0, 0],
-  box2: [255, 128, 0],
-  box3: [255, 255, 0],
-  box4: [0, 255, 0],
-  box5: [0, 128, 128],
-  box6: [0, 0, 255],
-  box7: [128, 0, 128],
-  box8: [0, 0 ,0],
-  box9: [255, 255, 255]
-}
 
 function resetColors() {
-  var boxColorsDefault1 = 'rgb(' + boxColorsDefault['box1'][0] + ',' + boxColorsDefault['box1'][1] + ',' + boxColorsDefault['box1'][2] + ')'
-  var boxColorsDefault2 = 'rgb(' + boxColorsDefault['box2'][0] + ',' + boxColorsDefault['box2'][1] + ',' + boxColorsDefault['box2'][2] + ')'
-  var boxColorsDefault3 = 'rgb(' + boxColorsDefault['box3'][0] + ',' + boxColorsDefault['box3'][1] + ',' + boxColorsDefault['box3'][2] + ')'
-  var boxColorsDefault4 = 'rgb(' + boxColorsDefault['box4'][0] + ',' + boxColorsDefault['box4'][1] + ',' + boxColorsDefault['box4'][2] + ')'
-  var boxColorsDefault5 = 'rgb(' + boxColorsDefault['box5'][0] + ',' + boxColorsDefault['box5'][1] + ',' + boxColorsDefault['box5'][2] + ')'
-  var boxColorsDefault6 = 'rgb(' + boxColorsDefault['box6'][0] + ',' + boxColorsDefault['box6'][1] + ',' + boxColorsDefault['box6'][2] + ')'
-  var boxColorsDefault7 = 'rgb(' + boxColorsDefault['box7'][0] + ',' + boxColorsDefault['box7'][1] + ',' + boxColorsDefault['box7'][2] + ')'
-  var boxColorsDefault8 = 'rgb(' + boxColorsDefault['box8'][0] + ',' + boxColorsDefault['box8'][1] + ',' + boxColorsDefault['box8'][2] + ')'
-  var boxColorsDefault9 = 'rgb(' + boxColorsDefault['box9'][0] + ',' + boxColorsDefault['box9'][1] + ',' + boxColorsDefault['box9'][2] + ')'
 
-  $('#box-1').css('background-color', boxColorsDefault1)
-  $('#box-2').css('background-color', boxColorsDefault2)
-  $('#box-3').css('background-color', boxColorsDefault3)
-  $('#box-4').css('background-color', boxColorsDefault4)
-  $('#box-5').css('background-color', boxColorsDefault5)
-  $('#box-6').css('background-color', boxColorsDefault6)
-  $('#box-7').css('background-color', boxColorsDefault7)
-  $('#box-8').css('background-color', boxColorsDefault8)
-  $('#box-9').css('background-color', boxColorsDefault9)
+  boxColors['box1'] = [255, 0, 0]
+  boxColors['box2'] = [255, 128, 0]
+  boxColors['box3'] = [255, 255, 0]
+  boxColors['box4'] = [0, 255, 0]
+  boxColors['box5'] = [0, 128, 128]
+  boxColors['box6'] = [0, 0, 255]
+  boxColors['box7'] = [128, 0, 128]
+  boxColors['box8'] = [0, 0 ,0]
+  boxColors['box9'] = [255, 255, 255]
+
+
+  var box1Color = 'rgb(' + boxColors['box1'][0] + ',' + boxColors['box1'][1] + ',' + boxColors['box1'][2] + ')'
+  var box2Color = 'rgb(' + boxColors['box2'][0] + ',' + boxColors['box2'][1] + ',' + boxColors['box2'][2] + ')'
+  var box3Color = 'rgb(' + boxColors['box3'][0] + ',' + boxColors['box3'][1] + ',' + boxColors['box3'][2] + ')'
+  var box4Color = 'rgb(' + boxColors['box4'][0] + ',' + boxColors['box4'][1] + ',' + boxColors['box4'][2] + ')'
+  var box5Color = 'rgb(' + boxColors['box5'][0] + ',' + boxColors['box5'][1] + ',' + boxColors['box5'][2] + ')'
+  var box6Color = 'rgb(' + boxColors['box6'][0] + ',' + boxColors['box6'][1] + ',' + boxColors['box6'][2] + ')'
+  var box7Color = 'rgb(' + boxColors['box7'][0] + ',' + boxColors['box7'][1] + ',' + boxColors['box7'][2] + ')'
+  var box8Color = 'rgb(' + boxColors['box8'][0] + ',' + boxColors['box8'][1] + ',' + boxColors['box8'][2] + ')'
+  var box9Color = 'rgb(' + boxColors['box9'][0] + ',' + boxColors['box9'][1] + ',' + boxColors['box9'][2] + ')'
+
+  $('#box-1').css('background-color', box1Color)
+  $('#box-2').css('background-color', box2Color)
+  $('#box-3').css('background-color', box3Color)
+  $('#box-4').css('background-color', box4Color)
+  $('#box-5').css('background-color', box5Color)
+  $('#box-6').css('background-color', box6Color)
+  $('#box-7').css('background-color', box7Color)
+  $('#box-8').css('background-color', box8Color)
+  $('#box-9').css('background-color', box9Color)
 
 }
 

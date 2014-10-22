@@ -1,4 +1,33 @@
-#boxes li{
+body {
+  background-color: #F1F1F1;
+}
+
+#wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+#title {
+  text-align: center;
+}
+
+#description-div {
+  text-align: center;
+}
+
+#description {
+  font-family: helvetica neue;
+}
+
+#reset {
+  text-align: center;
+}
+
+#boxes {
+  text-align: center;
+}
+
+#boxes li {
   display:block;
   width:30%;
   float:left;
@@ -43,5 +72,7 @@
   background-color: rgb(255,255,255);
 }
 
-
-
+h1 {
+  font-family: copperplate;
+  font-size: 50px;
+}
